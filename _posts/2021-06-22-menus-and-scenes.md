@@ -63,7 +63,7 @@ I don't mind this, especially while learning, coming from the web dev world. I a
 
 With this project, I'm essentially just bouncing back and forth between editor, shell, and game window, using `$ python main.py` to run a game.
 
-![My dev workflow](/assets/2021-06-22-menus-and-scenes/workflow.png)
+![My dev workflow]({{ site.baseurl }}/assets/2021-06-22-menus-and-scenes/workflow.png)
 
 <i>An example of another protoype I've worked on.</i>
 
@@ -276,7 +276,7 @@ These are about as simple as you can get when it comes to a menu and a main game
 The game now looks like:
 
 <video width="100%" muted controls autoplay loop>
-    <source src="/assets/2021-06-22-menus-and-scenes/simple_scene_switch.webm" type="video/webm">
+    <source src="{{ site.baseurl }}/assets/2021-06-22-menus-and-scenes/simple_scene_switch.webm" type="video/webm">
 </video>
 
 You can imagine how the `MainMenuScene` could eventually add multiple buttons rendered to the screen where a function is called when those buttons are clicked. There could be a button for Play, a button for Quit, and a button for Options for example. Then the `GameplayScene` could render a character to the screen, hook into keyboard inputs to move that character around, and lots more from there.

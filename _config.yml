@@ -1,4 +1,5 @@
 encoding: utf-8
+baseurl: /catchergames
 theme: jekyll-theme-minimal
 title: "Catcher Games"
 description: "Game development lessons learned and project updates."
