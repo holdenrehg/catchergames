@@ -1,4 +1,6 @@
-## Starting from scratch
+---
+title: "Starting from scratch"
+---
 
 I've written software since 17 years old, not counting odd programming-esque things growing up like altering programs on a graphing calculator or little drag and drop logic builders.
 
@@ -15,8 +17,3 @@ I'm coming from a web dev background. I've built web sites and applications in o
 So naturally I've also run across [pygame](https://github.com/pygame/pygame). Using pygame throughout the last week has been an entirely different experience. The framework is more explicit and maybe more cumbersome compared to other tools of course, but I'm excited to use it to learn. Writing some of the logic for display rendering, handling sprites, simple physics, etc. clears up the fog in my head. I'm going to use it to hopefully build multiple small projects or prototypes. As I get further into the game dev world, maybe even get something out to steam or itch.io.
 
 So let's see how this goes. Wish me luck.
-
-
----
-
-_June 17th, 2021_

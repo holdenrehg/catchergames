@@ -1,0 +1,13 @@
+---
+layout: page
+---
+
+<div id="posts">
+    {% for post in site.posts %}
+        {% include post_body.html post=post %}
+
+        {% if forloop.last == false %}
+        <hr style="margin: 4rem 0; height: 1px; background: #267CB9; opacity: 0.25;"/>
+        {% endif %}
+    {% endfor %}
+</div>
