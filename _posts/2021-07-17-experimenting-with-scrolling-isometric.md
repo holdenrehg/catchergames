@@ -32,11 +32,11 @@ def from_tiled(map_file, base_dir: str):
 
     return TileMap(
         size=(
-            map_tree.attrib["width"], 
+            map_tree.attrib["width"],
             map_tree.attrib["height"]
         ),
         tile_size=(
-            map_tree.attrib["tilewidth"], 
+            map_tree.attrib["tilewidth"],
             map_tree.attrib["tileheight"]
         ),
         layers=_parse_layers(tile_set, map_tree),
@@ -60,8 +60,8 @@ The `World` acts as the glue between `TileMap` and `Camera`.
 
 ```python
 def render(
-	self, 
-	screen: pygame.Surface, 
+	self,
+	screen: pygame.Surface,
 	camera: Camera
 ):
     for layer_level, layer in enumerate(self.map.layers.values()):
@@ -139,13 +139,13 @@ def main():
     try:
     	while running:
             screen.fill((0, 0, 0))
-            
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
-            
+
             world.render(screen, camera)
-            
+
             pygame.display.flip()
     except pygame.error:
         pass
@@ -181,7 +181,7 @@ world = None
 with open(TILEMAP_PATH) as map_file:
     world = World(
         imports.from_tiled(
-            map_file, 
+            map_file,
             base_dir=ASSETS_PATH
         )
     )
@@ -218,7 +218,7 @@ finally:
 
 ## User input and current position
 
-Once the world was rendering the way I wanted, the last step was to get the camera to move adjust what's displaying on screen. Hooking into the arrow keys was the simplest route. For example, when you press the right arrow key, the camera position should increment the x coordinate. Left arrow decrements x, up arrow decrements y, down arrow increments y. 
+Once the world was rendering the way I wanted, the last step was to get the camera to move adjust what's displaying on screen. Hooking into the arrow keys was the simplest route. For example, when you press the right arrow key, the camera position should increment the x coordinate. Left arrow decrements x, up arrow decrements y, down arrow increments y.
 
 ![screenshot of world]({{ site.baseurl }}/assets/2021-07-17-experimenting-with-scrolling-isometric/screenshot.png)
 
@@ -236,12 +236,12 @@ try:
     	# Display current camera coordinates...
     	font = pygame.font.SysFont(None, 36)
         text = font.render(
-            f"({camera.position[0]}, {camera.position[1]})", 
-            False, 
+            f"({camera.position[0]}, {camera.position[1]})",
+            False,
             (255, 255, 255)
         )
         screen.blit(
-            text, 
+            text,
             (camera.size[0] - text.get_rect().width - 10, 10)
     	)
 
