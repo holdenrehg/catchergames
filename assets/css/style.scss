@@ -1,0 +1,56 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+header {
+    .posts {
+        @media print, screen and (max-width: 960px) {
+            position: initial;
+        }
+    }
+
+    @media print, screen and (max-width: 959px) {
+        padding-right: 0;
+    }
+    @media print, screen and (min-width: 960px) {
+        width: 360px;
+    }
+    @media print, screen and (min-width: 1060px) {
+        width: 500px;
+    }
+}
+
+.wrapper {
+    @media print, screen and (min-width: 960px) {
+        width: 880px;
+    }
+
+    @media print, screen and (min-width: 1060px) {
+        width: 960px;
+    }
+}
+
+#posts {
+  #markdown-toc {
+    display: none;
+  }
+
+  .post {
+    a:not(.no-before) {
+      white-space: nowrap;
+    }
+
+    a:not(.no-before):before {
+      content: "🔗";
+      color: "#267CB9";
+      display: inline-block;
+      font-size: 82%;
+      margin-right: 2px;
+    }
+
+    #markdown-toc a:before {
+      display: none;
+    }
+  }
+}

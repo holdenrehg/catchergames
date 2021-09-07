@@ -6,8 +6,10 @@ Hosted at [https://holdenrehg.github.io/catchergames](https://holdenrehg.github.
 
 ### Run locally
 
+Using ruby `> 2.4.5`:
+
 ```sh
-$ bundle install
+$ bundle update
 
 $ bundle exec jekyll serve  # access at http://localhost:4000/catchergames/
 ```
